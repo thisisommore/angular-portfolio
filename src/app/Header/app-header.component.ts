@@ -24,10 +24,6 @@ export class HeaderComponent implements OnInit {
     }
 
     @HostListener("window:scroll", []) onWindowScroll() {
-        let headerData = {
-            height: this.header.nativeElement.style.height,
-            heightAfterScrollDown: (parseInt(this.header.nativeElement.style.height)/30).toString()+"px"
-        }
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number > 50 && this.innerWidth > 900) {
         
