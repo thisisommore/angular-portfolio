@@ -1,4 +1,7 @@
 <app-header></app-header>
-<div style="overflow: visible;">
-<router-outlet></router-outlet>
+<div [@routeAnimations]="o && o.activatedRouteData 
+      && o.activatedRouteData['animation']">
+      <div style="overflow: visible;">
+            <router-outlet #o="outlet"></router-outlet>
+      </div>
 </div>

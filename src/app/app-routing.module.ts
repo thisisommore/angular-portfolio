@@ -4,18 +4,22 @@ import {AppComponent} from './app.component';
 import { HomeComponent } from './HomePage/app-home.component';
 import { AppWorkComponent } from './app-work/app-work.component';
 import { AppContactComponent } from './app-contact/app-contact.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 const AppRoutes : Routes = [{
     path: '', redirectTo: 'home' ,pathMatch: 'full'
 },
 {
-    path: 'home',component: HomeComponent
+    path: 'home',component: HomeComponent , data: {animation: 'Home'}
 },
 {
-    path: 'myWork', component: AppWorkComponent
+    path: 'myWork', component: AppWorkComponent 
 },
 {
-    path: 'contact', component: AppContactComponent
+    path: 'contact', component: AppContactComponent , data: {animation: 'Contact'}
+},
+{
+    path: 'aboutMe', component: AboutMeComponent , data: {animation: 'About'}
 }
 ]
 

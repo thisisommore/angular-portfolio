@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -7,17 +8,20 @@ import {HeaderComponent} from './Header/app-header.component'
 import {HomeComponent} from './HomePage/app-home.component';
 import { AppContactComponent } from './app-contact/app-contact.component';
 import { AppWorkComponent } from './app-work/app-work.component'
+import { AboutMeComponent } from './about-me/about-me.component'
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     AppContactComponent,
-    AppWorkComponent
+    AppWorkComponent,
+    AboutMeComponent
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

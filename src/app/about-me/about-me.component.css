@@ -1,0 +1,105 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.main_detail_heading {
+    color: white;
+    margin-bottom: 50px;
+    margin-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.card_detail_heading {
+    /* color: rgb(248, 71, 233); */
+    color: rgba(255, 0, 234, 0.8);
+    margin: 6px 0 0 1%;
+    font-family: Segoe UI,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: xxx-large;
+}
+
+.cards_container {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.single_card {
+    position: relative;
+    margin: 0 0;
+    float: left;
+    color: transparent;
+    height: 400px;
+    width: 26%;
+    transition: 0.8s;
+}
+
+.inner_card {
+    background:  rgb(26, 25, 25); /*linear-gradient(145deg, #eeecec, #ffffff);*/
+    padding: 0;
+    /* border-radius: 1%; */
+    float: left;
+    height: 400px;
+    width: 100%;
+    box-shadow:  30px 30px 200px #dbdada;
+    transition: 0.8s;
+}
+
+.inner_card p{
+    font-family: monospace;
+    padding: 2px 1%;
+    font-size: xx-large;
+    color: rgba(255, 166, 0, 0.836);
+    font-weight: 600;
+}
+
+.year {
+    color: black;
+}
+
+.status_card {
+    position: absolute;
+    background:  rgb(102, 255, 0);
+    /* border-radius: 6%; */
+    /* border-radius: 2%; */
+    float: left;
+    height: 400px;
+    width: 100%;
+    transition: 0.4s;
+    z-index: -2;
+}
+
+.single_card:hover .status_card {
+    height: 428px;
+    margin-top: -38px;
+    /* margin-left: -2.5%; */
+    box-shadow:  -6px -6px 12px green, 
+    30px 30px 40px green;
+}
+
+
+.single_card:hover {
+    margin-top: -10px;
+}
+
+
+.status_card h1{
+    font-size: xx-large;
+    margin: 0 1%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .single_card
+    {
+        width: 100%;
+        /* margin-bottom: 10px; */
+    }
+}
