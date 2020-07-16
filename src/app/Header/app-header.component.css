@@ -70,7 +70,7 @@ hr {
     z-index: 2;
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 500px) /* mobile potrait */
 {
     .profile-image-header {
         margin-top: auto;
@@ -79,7 +79,32 @@ hr {
     }
 
     .header{
-        height: 130px !important;/* Imp not works here*/
+        height: 130px;
     }
     .blank-space { height: 130px;}
+}
+
+@media only screen and (max-width: 900px) /* mobile landscape */
+{
+    .profile-image-header {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .header{
+        height: 130px;
+    }
+    .blank-space { height: 130px;}
+
+    .nav-container-header {
+        width: 50%;
+    }
+
+    .nav-container-header a{
+    padding: 0 5px;
+    font-size: medium;
+    }
+
+    .nav-container-header a:hover{
+        font-size: large;
+    }
 }

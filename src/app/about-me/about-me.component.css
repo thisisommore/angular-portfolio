@@ -98,6 +98,13 @@
 
 @media only screen and (max-width: 900px)
 {
+    .single_card {
+        width: 46%;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
     .single_card
     {
         width: 100%;
