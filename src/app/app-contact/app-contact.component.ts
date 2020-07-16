@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Renderer2, ElementRef } from '@angular/core';
+import {NgForm} from '@angular/forms'
+import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-app-contact',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppContactComponent implements OnInit {
 
-  constructor() { }
 
+  @ViewChild('error') errorView :ElementRef;
+  @ViewChild('success') successView :ElementRef;
+  constructor(private MakeHttpReq : HttpClient, private renderer : Renderer2) {}
+
+  url = "https://polar-ocean-56832.herokuapp.com/email"
   ngOnInit(): void {
+  }
+
+  onSubmit(formData: NgForm)
+  {
+    this.MakeHttpReq.post(this.url,{
+      feedback: formData.value.feedback
+    }).subscribe(()=>{
+      this.renderer.setStyle(this.successView.nativeElement,"display","block")
+      setTimeout(()=>{
+        this.renderer.setStyle(this.successView.nativeElement,"display","none")
+      },2000)
+    },
+    ()=>{
+      this.renderer.setStyle(this.errorView.nativeElement,"display","block")
+      setTimeout(()=>{
+        this.renderer.setStyle(this.errorView.nativeElement,"display","none")
+      },2000)
+    });
   }
 
 }

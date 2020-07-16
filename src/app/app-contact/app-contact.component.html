@@ -1,5 +1,6 @@
 <div class="container">
     <div class="contact">
+
         <div class="single_group">
             <h1>Email</h1>
             <div class="contact_card">
@@ -14,7 +15,16 @@
         </div>
         <div class="feedback_group">
             <h1>Leave Feedback</h1>
-            <textarea name="feedback"></textarea>
+            <form #formT="ngForm" (ngSubmit)="onSubmit(formT)">
+                <textarea required name="feedback" ngModel></textarea>
+                <div #success class="success">
+                    <p>Thanks for feedback</p>
+                </div>
+                <div #error class="error">
+                    <p>Feedback not send please try later</p>
+                </div>
+                <button *ngIf="formT.valid && formT.dirty" type="submit">Send</button>
+            </form>
         </div>
     </div>
 
