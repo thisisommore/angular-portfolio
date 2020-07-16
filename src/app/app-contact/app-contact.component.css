@@ -1,0 +1,72 @@
+.container {
+    width: 100%;
+}
+
+.contact {
+    margin: 0 12%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 600px;
+}
+
+.single_group {
+    margin-top: 30px;
+    color: white;
+    height: 20%;
+}
+
+.feedback_group {
+    color: white;
+    margin-top: 30px;
+}
+
+.feedback_group > textarea {
+    width: 80%;
+    font-size: larger;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow:  1px 1px 20px #ededed67, 
+             -1px -1px 20px #ededed67;
+}
+
+.icon_for_contact {
+    margin-left: 0.5%;
+    height: 85%;
+}
+
+.contact_card {
+    color: rgba(0, 0, 0, 0.719);
+    overflow: hidden;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    width: 40%;
+    height: 35%;
+    background-color: rgba(255, 255, 255, 0.664);
+    transition: 0.8s;
+}
+
+.main_contact_id {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    padding-left: 1%;
+    font-weight: bolder;
+}
+
+.contact_card:hover {
+    margin-left: -1%;
+    width: 42%;
+    margin-top: -0.2%;
+    /* margin-top: -4px; */
+    height: 40%;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0,0.9);
+}
+
+@media only screen and (max-width: 900px)
+{
+    .contact_card {
+        width: 100%;
+    }
+
+    .main_contact_id{
+        padding-left: 2%;
+    }
+}
