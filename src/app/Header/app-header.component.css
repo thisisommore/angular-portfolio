@@ -91,9 +91,9 @@ hr {
         margin-bottom: auto;
     }
     .header{
-        height: 130px;
+        height: 100px;
     }
-    .blank-space { height: 130px;}
+    .blank-space { height: 100px;}
 
     .nav-container-header {
         width: 50%;

@@ -36,4 +36,8 @@ export class AppContactComponent implements OnInit {
     });
   }
 
+  redirect(link){
+    document.location.href = link;
+  }
+
 }
