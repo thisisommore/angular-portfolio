@@ -1,9 +1,18 @@
-import {Component,HostListener,ViewChild,ElementRef,Renderer2, OnInit} from '@angular/core';
+import {
+  Component,
+  HostListener,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  OnInit,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
 @Component({
     selector: 'app-header',
     templateUrl: './app-header.component.html',
-    styleUrls : ['./app-header.component.css']
+    styleUrls : ['./app-header.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
 
@@ -60,9 +69,9 @@ export class HeaderComponent implements OnInit {
             {
                 this.renderer.setStyle(this.header.nativeElement,"height","130px");
 
-                
+
             }
         }
-            
+
     }
 }

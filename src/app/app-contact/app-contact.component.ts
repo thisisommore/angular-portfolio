@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild, Renderer2, ElementRef } from '@angular/core';
+import {Component, OnInit, ViewChild, Renderer2, ElementRef, ChangeDetectionStrategy} from '@angular/core';
 import {NgForm} from '@angular/forms'
 import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-app-contact',
   templateUrl: './app-contact.component.html',
-  styleUrls: ['./app-contact.component.css']
+  styleUrls: ['./app-contact.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppContactComponent implements OnInit {
 
