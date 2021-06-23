@@ -1,0 +1,3 @@
+FROM ubuntu
+
+RUN npm i -g @angular/cli

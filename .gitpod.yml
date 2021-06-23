@@ -1,0 +1,6 @@
+image:
+  file: ./Dockerfile
+
+tasks:
+  - init: npm i
+    command: ng serve --hmr
