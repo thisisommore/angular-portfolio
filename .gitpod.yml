@@ -3,4 +3,4 @@ image:
 
 tasks:
   - init: npm i
-    command: ng serve --hmr
+    command: ng serve --hmr --disable-host-check
